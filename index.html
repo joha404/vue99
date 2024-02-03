@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this is my vue project</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./vue.global.js"></script>
+  </head>
+  <body>
+    <h1>This is my vue project</h1>
+    <hr />
+
+    <div id="app">
+      <!-- <p>counter : {{count}}</p> -->
+      <!-- mouse event pass start
+        
+        
+        
+        <button @click="inc(2)">Increment</button>
+      <button @click="decn(2)">decrement</button>
+      <button @click="test($event)">test</button>
+    
+    mouse event pass end-->
+
+      <input type="text" id="input_value" v-model="newskill.name" />
+      <!-- <h3>welcome Sir {{name}}</h3> -->
+
+      <button @click="addskill" onclick="joha()">Add</button> <br />
+      <h2>Skills</h2>
+      <ol>
+        <li v-for="skill in skills" @click="removeSkill()" :key="skill.name">
+          <h1 class="myh2">{{skill.name}} {{"("+skill.age+")"}}</h1>
+          <input type="text" placeholder="remark" @click.stop />
+        </li>
+        <br />
+      </ol>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
